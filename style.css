@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    text-align: center;
+}
+
+button {
+    /*Adjust the size, spacing, or color of the buttons*/
+    height: 3em;
+    width: 200px;
+    background-color: white;
+    border: solid 10px var(--border);
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Akaya Kanadaka', cursive;
+
+}
+
+body {
+    --background: #f5cdde;
+    --front: white;
+    --back: white;
+    --text: #7dffc9;
+    --border: #daffcf;
+    --title: #FFAA81;
+    /* background-image: url('https://images.unsplash.com/photo-1550542442-d5c354329585?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1373&q=80'); */
+    background-size: cover;
+    font-family: 'Akaya Kanadaka', cursive;
+}
+
+h1 {
+    color: var(--title);
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Button */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /*   padding: 2em 0em; */
+}
+
+.button_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0px;
+    width: 240px;
+}
+
+.btn {
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    background: #fff;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+/*btn_background*/
+.effect {
+    --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+    display: var(--uismLinkDisplay);
+    color: #000;
+    outline: solid 2px #000;
+    position: relative;
+    transition-duration: 0.4s;
+    overflow: hidden;
+}
+
+.effect::before,
+.effect span {
+    margin: 0 auto;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    transition-duration: 0.4s;
+}
+
+/* 文字1を上に */
+.effect:hover {
+
+    background-color: #000;
+}
+
+/* HOVERしたら文字1を上に */
+.effect:hover span {
+    -webkit-transform: translateY(-400%) scale(-0.1, 20);
+    transform: translateY(-400%) scale(-0.1, 20);
+}
+
+/*文字2*/
+.effect::before {
+    content: attr(data-sm-link-text);
+    color: #FFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: translateY(500%) scale(-0.1, 20);
+    transform: translateY(500%) scale(-0.1, 20);
+}
+
+/* HOVERしたら文字2を上に */
+.effect:hover::before {
+    letter-spacing: 0.05em;
+    -webkit-transform: translateY(0) scale(1, 1);
+    transform: translateY(0) scale(1, 1);
+}
+
+
+/* Content */
+.wrapper{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* welcome card */
+.welcome_card{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 40px;
+    box-shadow: 0px 5px 15px -4px #b3b3b3;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+    background: #fff;
+}
+.welcome_card h1{
+    font-size: 3.0em;
+    margin-bottom: 25px;
+}
+.welcome_card p{
+    font-size: 1.1em;
+    color: rgb(66, 66, 66);
+    margin-bottom: 15px;
+}
+.welcome_card p b{
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.2em;
+    color: var(--title)
+}
+
+/* flash cards */
+.flash_cards{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1340px;
+    padding: 40px;
+    box-shadow: 0px 5px 15px -4px #b3b3b3;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+    background: #fff;
+}
+.timer h3{
+    color: var(--title);
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8em;
+}
+.timer p{
+    font-size: 1.5em;
+    color: rgb(66, 66, 66);
+    margin-bottom: 10px;
+    font-family: 'Great Vibes', cursive;
+}
+.timeleft{
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--title);
+}
+.cards{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+.card {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    color: #fff;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    transform: perspective(1000px);
+    -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-origin: preserve-3d;
+    -ms-transform-origin: preserve-3d;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+}
+
+/* flip the pane, and move down*/
+.card.flipped,
+.card.flipped{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card_front,
+.card_back {
+    width: 100%;
+    height: 100%;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card_front .buttons{
+    height: fit-content;
+}
+.card_front h2{
+    margin-bottom: 20px;
+    font-size: 1.9em;
+    font-family: 'Great Vibes', cursive;
+}
+.card_back h2{
+    margin-bottom: 20px;
+    font-size: 1.9em;
+    font-family: 'Great Vibes', cursive;
+}
+/*change style of the card here */
+.card_front {
+    text-align: center;
+}
+
+.card_back {
+    text-align: center;
+}
+
+/* flip speed goes here */
+.card {
+    position: relative;
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transition: 0.6s;
+    -ms-transition: 0.6s;
+    -moz-transition: 0.6s;
+    transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+.card_front,
+.card_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+    -o-transform: rotateY(0deg);
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+    -ms-transform: rotateY(0deg);
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    padding: 15px;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+/* front pane, placed above back */
+.card_front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.card_back {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+/* result */
+.result{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 40px;
+    box-shadow: 0px 5px 15px -4px #b3b3b3;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+    background: #fff;
+    min-width: 400px;
+}
+.result h1{
+    font-size: 3.0em;
+    margin-bottom: 25px;
+}
+.result p{
+    font-size: 1.1em;
+    color: rgb(66, 66, 66);
+    margin-bottom: 15px;
+}
+.result p b{
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.2em;
+    color: var(--title)
+}
