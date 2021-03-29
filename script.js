@@ -122,7 +122,7 @@ const showResult = (timeup = false) => {
     clearInterval(coundown)
 }
 
-const coundown = setInterval(() => {
+const coundown = () => setInterval(() => {
     if(lucky_card_number !== null && card_choosen === null){
         secoundLeft = secoundLeft - 1;
         if(secoundLeft > 0) timeleft.innerHTML = secoundLeft
