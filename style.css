@@ -372,3 +372,10 @@ h1 {
     font-size: 1.2em;
     color: var(--title)
 }
+.choosen {
+    transform: rotateY(180deg) translateY(-15px) !important;
+    -webkit-transform: rotateY(180deg) translateY(-15px) !important;
+    -moz-transform: rotateY(180deg) translateY(-15px) !important;
+    -ms-transform: rotateY(180deg) translateY(-15px) !important;
+    -o-transform: rotateY(180deg) translateY(-15px) !important;
+}
