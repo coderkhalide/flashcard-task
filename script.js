@@ -11,6 +11,13 @@ let card_choosen = null
 let time = 30             // seconds
 let secoundLeft = time
 
+let music = new Audio();
+const playMusic = file => {
+    music.pause();
+    music = new Audio(file);
+    music.play();
+}
+
 const flash_card_datas = [
     {
         id: 1,
@@ -47,7 +54,7 @@ const unLucky_card = {
 welcome_card_button.addEventListener('click', e => {
     welcome_card.style.display = 'none'
     flash_cards.style.display = 'block'
-
+    playMusic('audio/click.mp3')
     cards.innerHTML = createCards()
     single_card_flip()
     coundown()
@@ -89,7 +96,8 @@ const createCards = () => {
 const flip_all_cards = () => {
     const cards = document.querySelectorAll('.card')
     cards.forEach(card => card.classList.add('flipped'))
-
+    
+    lucky_card_number === card_choosen ? playMusic('audio/happy.mp3') : playMusic('audio/sad.mp3')
     setTimeout(showResult, 3000)
 }
 
@@ -99,7 +107,8 @@ const single_card_flip = () => {
 
     flash_card_buttons.forEach((card, index) => {
         card.addEventListener('click', (e) => {
-            cards[index].classList.add('flipped')
+            playMusic('audio/click.mp3');
+            cards[index].classList.add('flipped', 'choosen')
             card_choosen = Number(card.getAttribute('data-card-id'))
             setTimeout(flip_all_cards, 1000)
         })
